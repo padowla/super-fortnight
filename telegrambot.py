@@ -21,7 +21,7 @@ import paramiko
 ##                                   GLOBAL VARIABLES                                              ##
 reply_kb_markup = None
 inline_reply_markup = None
-IP_pfSense = "192.168.1.3"
+ip_pfSense = "192.168.1.3"
 username_pfSense = "root"
 pwd_pfSense = "pfsense"
 
