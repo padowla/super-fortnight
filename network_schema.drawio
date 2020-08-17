@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-17T22:05:15.657Z" agent="5.0 (X11)" etag="G2bHArg4hL4Nst5BsCOK" version="13.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-17T22:08:19.021Z" agent="5.0 (X11)" etag="Ll9kxdaZw0hVFshKz9KZ" version="13.6.2" type="github">
   <diagram name="Page-1" id="e3a06f82-3646-2815-327d-82caf3d4e204">
     <mxGraphModel dx="1702" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -10,7 +10,7 @@
         <mxCell id="6a7d8f32e03d9370-60" value="Enterprise cloud" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=14;strokeColor=none;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="988.5" y="2206" width="602" height="374" as="geometry" />
         </mxCell>
-        <mxCell id="6a7d8f32e03d9370-59" value="Citrix XenApp Server Farm&lt;div&gt;with firewalls&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#EDEDED;fontSize=14;strokeColor=none;verticalAlign=top;" parent="1" vertex="1">
+        <mxCell id="6a7d8f32e03d9370-59" value="Citrix XenApp Server Farm&lt;div&gt;with firewalls&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#EDEDED;fontSize=14;strokeColor=none;verticalAlign=top;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="650.5" y="1540" width="280" height="1010" as="geometry" />
         </mxCell>
         <mxCell id="6a7d8f32e03d9370-58" value="Residential Private Networks" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;fontSize=14;strokeColor=none;verticalAlign=top;" parent="1" vertex="1">
@@ -210,9 +210,6 @@
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-7" value="&lt;font color=&quot;#FF3333&quot;&gt;&lt;i&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;IP LAN 192.168.1.1&lt;br&gt;&lt;/font&gt;&lt;/i&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="988.5" y="480" width="160" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Nfk5zxaUeVj95vEAJOdN-8" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.laptop_2;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="740.0000000000001" y="770" width="160.92" height="120" as="geometry" />
-        </mxCell>
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-9" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.laptop_1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="258.49999999999994" y="505" width="165.45" height="140" as="geometry" />
         </mxCell>
@@ -228,9 +225,9 @@
             <mxPoint x="650.5" y="453.53" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Nfk5zxaUeVj95vEAJOdN-13" style="edgeStyle=none;rounded=0;html=1;startSize=10;endSize=10;jettySize=auto;orthogonalLoop=1;fontSize=14;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="1" source="Nfk5zxaUeVj95vEAJOdN-8" target="Nfk5zxaUeVj95vEAJOdN-4">
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-13" style="edgeStyle=none;rounded=0;html=1;startSize=10;endSize=10;jettySize=auto;orthogonalLoop=1;fontSize=14;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="1" target="Nfk5zxaUeVj95vEAJOdN-4">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="433.9499999999998" y="567.0716243300947" as="sourcePoint" />
+            <mxPoint x="835.412945828391" y="770" as="sourcePoint" />
             <mxPoint x="848.6799999999998" y="477.19026752646937" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -257,6 +254,12 @@
         </mxCell>
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-20" value="&lt;font color=&quot;#FF3333&quot;&gt;&lt;i&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;IP 192.168.1.45&lt;/font&gt;&lt;/i&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="1554.5" y="530" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-22" value="&lt;font color=&quot;#3333FF&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 25px&quot;&gt;VIRTUALBOX&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#EDEDED;fontSize=14;strokeColor=none;verticalAlign=top;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="230.5" y="810" width="1440" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-40" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.laptop_2;labelBackgroundColor=none;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="750" y="750" width="116" height="86.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
