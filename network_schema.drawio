@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-17T22:34:56.281Z" agent="5.0 (X11)" etag="WPTmQrYals3H0dPibfvH" version="13.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-17T22:36:15.893Z" agent="5.0 (X11)" etag="OM7o52bUZayCrawESHAN" version="13.6.2" type="github">
   <diagram name="Page-1" id="e3a06f82-3646-2815-327d-82caf3d4e204">
     <mxGraphModel dx="1702" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -371,6 +371,24 @@
             <mxPoint x="896.012945828391" y="1180" as="sourcePoint" />
             <mxPoint x="962.9772215632003" y="911.3" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-96" value="Enterprise Networks" style="whiteSpace=wrap;html=1;fillColor=#FFD470;gradientColor=none;fontSize=14;strokeColor=none;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="1200" width="502.75" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-97" value="Client" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;shape=mxgraph.citrix.laptop_2;fillColor=#66B2FF;gradientColor=#0066CC;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1548.25" y="1751" width="116" height="86.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-98" value="client" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;shape=mxgraph.citrix.desktop;fillColor=#66B2FF;gradientColor=#0066CC;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1561.75" y="1586" width="89" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-99" value="Client" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;shape=mxgraph.citrix.desktop;fillColor=#66B2FF;gradientColor=#0066CC;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1561.75" y="1422" width="89" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-100" value="Client" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;shape=mxgraph.citrix.desktop;fillColor=#66B2FF;gradientColor=#0066CC;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1557.75" y="1258" width="89" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-101" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;shape=mxgraph.citrix.hq_enterprise;fillColor=#66B2FF;gradientColor=#0066CC;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1422.75" y="1354" width="92" height="88" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
