@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-17T22:13:34.207Z" agent="5.0 (X11)" etag="BPvblorxFvQXCSuIOChK" version="13.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-17T22:19:00.428Z" agent="5.0 (X11)" etag="H4pJjRumsFhUs9aykxR5" version="13.6.2" type="github">
   <diagram name="Page-1" id="e3a06f82-3646-2815-327d-82caf3d4e204">
     <mxGraphModel dx="1702" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -253,7 +253,7 @@
           <mxGeometry x="1540.5" y="465.65" width="130" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-22" value="&lt;font color=&quot;#3333FF&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 25px&quot;&gt;VIRTUALBOX&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#EDEDED;fontSize=14;strokeColor=none;verticalAlign=top;labelBackgroundColor=none;" vertex="1" parent="1">
-          <mxGeometry x="230.5" y="810" width="1440" height="410" as="geometry" />
+          <mxGeometry x="230.5" y="810" width="1449.5" height="310" as="geometry" />
         </mxCell>
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-40" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.laptop_2;labelBackgroundColor=none;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="750" y="750" width="116" height="86.5" as="geometry" />
@@ -272,6 +272,18 @@
         </mxCell>
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-48" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.wifi;pointerEvents=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="1485.8" y="424" width="81.7" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-50" value="SCHEDA DI RETE FISICA" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;fontStyle=1;fontColor=#3333FF;" vertex="1" parent="1">
+          <mxGeometry x="520" y="792.41" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-52" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=15;labelBorderColor=#3333FF;" vertex="1" parent="1">
+          <mxGeometry x="794.5" y="980" width="270" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-53" value="&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;192.168.1.60&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; VM1 IP&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="804.5" y="990" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-54" value="&lt;div align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;192.168.1.3&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; VM2 IP&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="810" y="1040" width="250" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
