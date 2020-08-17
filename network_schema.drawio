@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-17T22:20:06.813Z" agent="5.0 (X11)" etag="4ChkZENG1vYMmCPD1VlZ" version="13.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-17T22:22:45.015Z" agent="5.0 (X11)" etag="DlZ-z1oqJMr0nmyEa_TL" version="13.6.2" type="github">
   <diagram name="Page-1" id="e3a06f82-3646-2815-327d-82caf3d4e204">
     <mxGraphModel dx="1702" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -287,6 +287,27 @@
         </mxCell>
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-55" value="" style="triangle;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=15;rotation=-90;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="864.25" y="774.75" width="130.5" height="275" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-57" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.chassis;labelBackgroundColor=none;fontSize=15;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1190" width="137.5" height="177.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-58" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/NetworkInterfaceCard.svg;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="413.5" y="1190" width="60" height="68.18" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-59" style="edgeStyle=none;rounded=0;html=1;startSize=10;endSize=10;jettySize=auto;orthogonalLoop=1;fontSize=14;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="1" target="Nfk5zxaUeVj95vEAJOdN-53">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="439.532945828391" y="1208.7" as="sourcePoint" />
+            <mxPoint x="506.49722156320024" y="940" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="1005" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-60" value="&lt;font color=&quot;#FF3333&quot;&gt;&lt;i&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;IP 192.168.1.60&lt;/font&gt;&lt;/i&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1268.75" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-61" value="&lt;font style=&quot;font-size: 20px&quot; face=&quot;Helvetica&quot;&gt;&lt;b&gt;ZABBIX SERVER&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="283.5" y="1375" width="180" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
