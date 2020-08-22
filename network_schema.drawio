@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-08-22T11:08:57.957Z" agent="5.0 (X11)" etag="yAH9TDKpRrN_0d2hdOmF" version="13.6.4" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-22T15:18:57.452Z" agent="5.0 (X11)" etag="91sgya66ateTmXmKKBId" version="13.6.4" type="github">
   <diagram name="Page-1" id="e3a06f82-3646-2815-327d-82caf3d4e204">
-    <mxGraphModel dx="1027" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1702" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" style=";html=1;" />
         <mxCell id="1" style=";html=1;" parent="0" />
@@ -103,8 +103,8 @@
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-53" value="&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;192.168.1.60&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; VM1 IP&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="804.5" y="990" width="250" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Nfk5zxaUeVj95vEAJOdN-54" value="&lt;div align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;192.168.1.3&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; VM2 IP&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;fontColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="810" y="1040" width="250" height="30" as="geometry" />
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-54" value="&lt;div align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;192.168.1.61 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; VM2 IP&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="810" y="1040" width="260" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yDgh2pboNB-Rd3pBc1ei-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Nfk5zxaUeVj95vEAJOdN-55" target="Nfk5zxaUeVj95vEAJOdN-40" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -139,8 +139,8 @@
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-67" value="&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;PFSENSE&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="739" y="1397.18" width="110" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Nfk5zxaUeVj95vEAJOdN-69" value="&lt;b&gt;&lt;font color=&quot;#FF3333&quot;&gt;&lt;i&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;IP WAN 192.168.3&lt;/font&gt;&lt;/i&gt;&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;" parent="1" vertex="1">
-          <mxGeometry x="699" y="1180" width="150" height="20" as="geometry" />
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-69" value="&lt;b&gt;&lt;font color=&quot;#FF3333&quot;&gt;&lt;i&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;IP WAN 192.168.1.61&lt;/font&gt;&lt;/i&gt;&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="689" y="1180" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-70" value="&lt;b&gt;&lt;font color=&quot;#FF3333&quot;&gt;&lt;i&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;IP LAN_58 192.168.58.100&lt;/font&gt;&lt;/i&gt;&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=15;" parent="1" vertex="1">
           <mxGeometry x="471" y="1405" width="210" height="20" as="geometry" />
