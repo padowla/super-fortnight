@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-22T09:51:04.556Z" agent="5.0 (X11)" etag="qZnfGAzxYxIIE_rgRkr1" version="13.6.4" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-22T09:58:08.194Z" agent="5.0 (X11)" etag="vJLwsRhlO2Fy7_L5ELDU" version="13.6.4" type="github">
   <diagram name="Page-1" id="e3a06f82-3646-2815-327d-82caf3d4e204">
     <mxGraphModel dx="2042" dy="992" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -7,7 +7,7 @@
         <mxCell id="6a7d8f32e03d9370-62" value="Network Architecture" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
           <mxGeometry x="499" y="30" width="861" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Nfk5zxaUeVj95vEAJOdN-1" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.cloud;" parent="1" vertex="1">
+        <mxCell id="Nfk5zxaUeVj95vEAJOdN-1" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.citrix.cloud;" parent="1" vertex="1">
           <mxGeometry x="810" y="110" width="210" height="137.05" as="geometry" />
         </mxCell>
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-2" value="&lt;div style=&quot;font-size: 29px;&quot;&gt;INTERNET&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontStyle=1;fontSize=29;" parent="1" vertex="1">
@@ -74,7 +74,7 @@
           <mxGeometry x="1540.5" y="465.65" width="130" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-22" value="&lt;div align=&quot;left&quot;&gt;&lt;font color=&quot;#3333FF&quot;&gt;&lt;b style=&quot;font-size: 33px&quot;&gt;&lt;font style=&quot;font-size: 33px&quot;&gt;VIRTUALBOX&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#EDEDED;fontSize=14;strokeColor=none;verticalAlign=top;labelBackgroundColor=none;align=left;" parent="1" vertex="1">
-          <mxGeometry x="210.25" y="812.41" width="1449.5" height="310" as="geometry" />
+          <mxGeometry y="812.41" width="1760" height="310" as="geometry" />
         </mxCell>
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-40" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.laptop_2;labelBackgroundColor=none;fontSize=15;" parent="1" vertex="1">
           <mxGeometry x="878.75" y="750" width="116" height="86.5" as="geometry" />
@@ -179,7 +179,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-96" value="&lt;font style=&quot;font-size: 30px&quot;&gt;&lt;b&gt;netA&lt;/b&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#FFD470;gradientColor=none;fontSize=14;strokeColor=none;verticalAlign=top;" parent="1" vertex="1">
-          <mxGeometry x="1180" y="1200" width="540" height="680" as="geometry" />
+          <mxGeometry x="1180" y="1200" width="520" height="680" as="geometry" />
         </mxCell>
         <mxCell id="Nfk5zxaUeVj95vEAJOdN-102" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;shape=mxgraph.citrix.switch;fillColor=#66B2FF;gradientColor=#0066CC;fontSize=14;rotation=0;" parent="1" vertex="1">
           <mxGeometry x="1210" y="1498.27" width="185" height="83.45" as="geometry" />
