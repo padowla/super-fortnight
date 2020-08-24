@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-08-24T11:17:11.722Z" agent="5.0 (X11)" etag="ljmBBuY23mrzzUD5e8bF" version="13.6.4" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-24T11:18:01.699Z" agent="5.0 (X11)" etag="f2aLjtRAjDPRrefCXyKY" version="13.6.4" type="github">
   <diagram name="Page-1" id="55a83fd1-7818-8e21-69c5-c3457e3827bb">
-    <mxGraphModel dx="1459" dy="709" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1201" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -99,26 +99,50 @@
         <mxCell id="SQDe0ABxg7kSBVtk6bbi-5" value="&lt;font face=&quot;Verdana&quot;&gt;&lt;b&gt;ZABBIX SERVER&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="1">
           <mxGeometry x="491" y="510" width="58" height="103.57" as="geometry" />
         </mxCell>
+        <mxCell id="SQDe0ABxg7kSBVtk6bbi-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.131;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="SQDe0ABxg7kSBVtk6bbi-11" target="SQDe0ABxg7kSBVtk6bbi-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="SQDe0ABxg7kSBVtk6bbi-11" value="&lt;b&gt;&lt;i&gt;ROUTERS,ICMP checks&lt;br&gt;&lt;/i&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="100" y="70" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SQDe0ABxg7kSBVtk6bbi-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="SQDe0ABxg7kSBVtk6bbi-12" target="SQDe0ABxg7kSBVtk6bbi-9">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="SQDe0ABxg7kSBVtk6bbi-12" value="&lt;i&gt;&lt;b&gt;Webpages&lt;/b&gt;&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="120" y="230" width="140" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="SQDe0ABxg7kSBVtk6bbi-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="SQDe0ABxg7kSBVtk6bbi-17" target="SQDe0ABxg7kSBVtk6bbi-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="SQDe0ABxg7kSBVtk6bbi-17" value="&lt;i&gt;&lt;b&gt;Printers,SNMPV1&lt;/b&gt;&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="115" y="360" width="145" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SQDe0ABxg7kSBVtk6bbi-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.852;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="SQDe0ABxg7kSBVtk6bbi-19" target="SQDe0ABxg7kSBVtk6bbi-9">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="SQDe0ABxg7kSBVtk6bbi-19" value="&lt;i&gt;&lt;b&gt;Switches,SNMPV2&lt;/b&gt;&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="125" y="500" width="130" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="SQDe0ABxg7kSBVtk6bbi-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.924;entryY=0.011;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="SQDe0ABxg7kSBVtk6bbi-20" target="SQDe0ABxg7kSBVtk6bbi-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="SQDe0ABxg7kSBVtk6bbi-20" value="&lt;i&gt;&lt;b&gt;NAS,SNMPV3&lt;/b&gt;&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="805" y="105" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SQDe0ABxg7kSBVtk6bbi-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="SQDe0ABxg7kSBVtk6bbi-21" target="SQDe0ABxg7kSBVtk6bbi-9">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="SQDe0ABxg7kSBVtk6bbi-21" value="&lt;i&gt;&lt;b&gt;Servers, IPMI&lt;br&gt;&lt;/b&gt;&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="805" y="240" width="130" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="SQDe0ABxg7kSBVtk6bbi-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SQDe0ABxg7kSBVtk6bbi-22" target="SQDe0ABxg7kSBVtk6bbi-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="SQDe0ABxg7kSBVtk6bbi-22" value="&lt;i&gt;&lt;b&gt;JAVA App, Servers&lt;br&gt;&lt;/b&gt;&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="805" y="370" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SQDe0ABxg7kSBVtk6bbi-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.012;entryY=0.873;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="SQDe0ABxg7kSBVtk6bbi-23" target="SQDe0ABxg7kSBVtk6bbi-9">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="SQDe0ABxg7kSBVtk6bbi-23" value="&lt;i&gt;&lt;b&gt;Linux Servers, ZABBIX AGENT&lt;br&gt;&lt;/b&gt;&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="750" y="480" width="240" height="90" as="geometry" />
