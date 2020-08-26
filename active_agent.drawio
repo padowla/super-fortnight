@@ -1,1 +1,52 @@
-<mxfile host="app.diagrams.net" modified="2020-08-26T09:04:38.926Z" agent="5.0 (X11)" version="13.6.5" etag="N1j5PCZSwdFotEPfocVf" type="github"><diagram id="gPaThXltTCzmpH2YQvvC">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-08-26T09:04:49.903Z" agent="5.0 (X11)" etag="o3H5Q7a4p2RC7QRNd2UX" version="13.6.5" type="github">
+  <diagram id="gPaThXltTCzmpH2YQvvC" name="Page-1">
+    <mxGraphModel dx="1021" dy="496" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BTUV8k6mDqFpTb835TiR-1" value="&lt;b&gt;SERVER&lt;/b&gt;" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="190" y="90" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="BTUV8k6mDqFpTb835TiR-2" value="&lt;b&gt;PASSIVE AGENT&lt;br&gt;&lt;/b&gt;" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="580" y="95" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BTUV8k6mDqFpTb835TiR-3" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAMAAABlApw1AAAAM1BMVEXUAAD////87+/XEBDcMDD3z8/kYGDvn5/qgIDyr6/sj4/ZICDhUFDncHD0v7/639/fQED3GypAAAABmUlEQVR4nO3ZyY0DUQxDQU8v3rf8o3UCPOhgi0PhVQQibDUI/cMBAAAAAAAAADDaXxsCEIAABCAAAQhAAAIQwBZg+VGA7zsvMsDdPVfZVc5/do9VdpTzn9xjlW1y/n11z1W1ygVYbu65qtZd/gCbe66yk5z/6B6r7BG+wHc5/9M9VtkmF/iV8wGSC7zkLPAlfIFnNoiLe6wyvcA0iDa6QbzdY5XRILzecv7dPVbZTS9wzgeIBuF1lvNf3WOV0SC81lf4As9sEA/3WGUcEb1mNgiOiG3SG8TMI2LOByi+QTzlH4hnyC40CK/0IyINwiz9iDizQfAM2Sb9iDizQXBE7JLeIIYeEXM+QOkNgmdILxqEWfoRkQbhFX9EnNkgeIbskn5EnNkgOCK2SW8QM4+IOR+g+AbBM6QXDcIr/YhIgzBLPyLObBA8Q7bRDSJngWc2CI6IXdIbxNAjYs4HKL1BpD9D6g9Q+hExqEHwDOlFg/CKPyLqBnGJCaAbxM98P0Dv/AQgAAEIQAACEIAABCAAAAAAAAAAAOBf+gB7Zxwv9n6YhgAAAABJRU5ErkJggg==;" vertex="1" parent="1">
+          <mxGeometry x="280" y="139" width="42" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="BTUV8k6mDqFpTb835TiR-4" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/designer-skills/128/linux-server-system-platform-os-computer-penguin-128.png" vertex="1" parent="1">
+          <mxGeometry x="660" y="123" width="58" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="BTUV8k6mDqFpTb835TiR-5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="370" y="80" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="BTUV8k6mDqFpTb835TiR-6" value="" style="endArrow=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;strokeWidth=3;" edge="1" parent="1" source="BTUV8k6mDqFpTb835TiR-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="200" as="sourcePoint" />
+            <mxPoint x="370" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTUV8k6mDqFpTb835TiR-7" value="&lt;div&gt;&lt;b&gt;Request: CPU Load&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Respone: 1.95&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="80" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="BTUV8k6mDqFpTb835TiR-8" value="" style="endArrow=classic;html=1;strokeWidth=3;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="190" as="sourcePoint" />
+            <mxPoint x="400" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTUV8k6mDqFpTb835TiR-9" value="" style="endArrow=classic;html=1;strokeWidth=3;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="123" as="sourcePoint" />
+            <mxPoint x="510" y="123" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTUV8k6mDqFpTb835TiR-10" value="" style="endArrow=classic;html=1;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="150" as="sourcePoint" />
+            <mxPoint x="580" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
