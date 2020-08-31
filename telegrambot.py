@@ -17,6 +17,8 @@ from telegram.ext import BaseFilter
 from telegram import ChatAction
 import paramiko
 import json
+from emoji import emojize
+
 
 ##                                   GLOBAL VARIABLES                                              ##
 reply_kb_markup = None
@@ -25,7 +27,13 @@ inline_reply_markup_rules = None
 ip_pfSense = "192.168.1.61"
 username_pfSense = "root"
 pwd_pfSense = "pfsense"
-
+### EMOJI ###
+red_exclamation_mark = emojize(":exclamation:", use_aliases=True) 
+white_check_mark = emojize(":white_check_mark:", use_aliases=True)
+red_cross_block = emojize(":x:", use_aliases=True)
+raised_hand = emojize(":raised_hand:", use_aliases=True)
+warning = emojize(":warning:", use_aliases=True)
+#############
 
 ##                                   CUSTOM FILTERS                                                ##
 class FilterKeyboardListRules(BaseFilter):
@@ -78,6 +86,8 @@ def list_rules(update, context):
 
 def parse_rule(json_rule):
     
+    rule_enabled = "" #text for disabled or enabled rule
+    rule_tracker = "" #text for rule's id tracker
     rule_type = None #emoji for the rule's type
     rule_address_family = "" #text for version of IP protocol (IPv4,IPv6,IPv4+6)
     rule_protocol = "" #text for type of protocol (TCP,UDP,TCP/UDP,ICMP...)
@@ -87,14 +97,23 @@ def parse_rule(json_rule):
     rule_dest_port = "" #text for destination port of rule
     rule_description = "" #text for description of rule
 
+    #Identify if rule is enabled or not
+    if("disabled" not in json_rule): #"disabled":""
+        rule_enabled = "YES"
+    else:
+        rule_enabled = warning + "NO" + warning 
+
+    #Identify id tracker of rule:
+    rule_tracker = json_rule['tracker']
+
 
     #Identify type of rule:
     if(json_rule['type'] == "pass"):
-        rule_type = "✅"
+        rule_type = white_check_mark
     elif(json_rule['type'] == "block"):
-        rule_type = "❌"
+        rule_type = red_cross_block
     elif(json_rule['type'] == "reject"):
-        rule_type = "✋"
+        rule_type = raised_hand
    
 
     #Identify address family version:
@@ -127,7 +146,7 @@ def parse_rule(json_rule):
         rule_source_addr = json_rule['source']
     
     if("not" in json_rule['source']): #ex: "source":{"network":"lan","not":""} there's "not" ==> Invert match checkbox checked in frontend
-        rule_source_addr = "❗️" + rule_source_addr #concat "!"
+        rule_source_addr = red_exclamation_mark + rule_source_addr #concat "!"
 
 
     #Identify source port ( or range of source ports), only if is present in JSON "protocol":"tcp\/udp" or "protocol":"tcp" or "protocol":"udp" ):
@@ -157,7 +176,7 @@ def parse_rule(json_rule):
         rule_dest_addr = json_rule['destination']
     
     if("not" in json_rule['destination']): #ex: "destination":{"network":"lan","not":""} there's "not" ==> Invert match checkbox checked in frontend
-        rule_dest_addr = "❗️" + rule_dest_addr #concat "!"
+        rule_dest_addr = red_exclamation_mark + rule_dest_addr #concat "!"
 
   
     #Identify destination port ( or range of destination ports), only if is present in JSON "protocol":"tcp\/udp" or "protocol":"tcp" or "protocol":"udp" ):
@@ -178,7 +197,9 @@ def parse_rule(json_rule):
 
 
     return '''
-            type: {rule_type}
+tracker: {rule_tracker}
+enabled: {rule_enabled}
+type: {rule_type}
 IP address family: {rule_ipprot}
 protocol: {rule_protocol}
 Source Address: {rule_source_addr}
@@ -186,14 +207,17 @@ Source Port: {rule_source_port}
 Destination Address: {rule_dest_addr}
 Destination Port: {rule_dest_port}
 Description: {rule_description}
-           '''.format(rule_type=rule_type,
+           '''.format(rule_tracker=rule_tracker,
+                      rule_enabled=rule_enabled,
+                      rule_type=rule_type,
                       rule_ipprot=rule_ipprot,
                       rule_protocol=rule_protocol,
                       rule_source_addr=rule_source_addr,
                       rule_source_port=rule_source_port,
                       rule_dest_addr=rule_dest_addr,
                       rule_dest_port=rule_dest_port,
-                      rule_description=rule_description)
+                      rule_description=rule_description
+                      )
 
 
 
@@ -206,20 +230,18 @@ def fetch_rules(update, context, interface):
     if(result == "0"):
         #output = "JSON created"
         JSONrules = json.loads(JSONstring)
-        #print(JSONrules)
+        print(JSONrules)
     else:
         pass
         #output = "An error occurred"
+    print(result)
+    return JSONrules
     
-    i = 0
-    
-    for rule in JSONrules:
-        print(f"      *** REGOLA NUMERO {i} ***\n")
-        print(JSONrules[i])
-        output = parse_rule(rule) 
-        i+=1
-        context.bot.send_message(chat_id=update.effective_chat.id, text=output, reply_markup=reply_kb_markup)
+def show_rules(update, context, interface):
+    JSONrules = fetch_rules(update, context, interface)
 
+    for rule in JSONrules:
+        context.bot.send_message(chat_id=update.effective_chat.id, text=parse_rule(rule), reply_markup=reply_kb_markup)
 
 
 def show_actions(update, context):
@@ -257,8 +279,8 @@ def close_netA(update,context):
 
 
 def unknown_command(update,context):
-    #Alcuni utenti confusi potrebbero provare ad inviare comandi al bot che non può comprendere in quanto non aggiunti al dispatcher
-    #Dunque è possibile usare un MessageHandler con il filtro "command" per rispondere a tutti i comandi che non sono riconosciuti dai precedenti handler
+    #Alcuni utenti confusi potrebbero provare ad inviare comandi al bot che non puo' comprendere in quanto non aggiunti al dispatcher
+    #Dunque e' possibile usare un MessageHandler con il filtro "command" per rispondere a tutti i comandi che non sono riconosciuti dai precedenti handler
     #Tale Handler deve essere aggiunto come ultimo altrimenti verrebbe attivato prima che CommandHandler abbia la possibilita'� di
     #poter esaminare l'aggiornamento. Una volta gestito infatti un aggiornamento tutti gli altri gestori vengono ignorati
     #Per aggirare questo fenomeno è possibile  passare l'argomento "group" nel metodo add_handler con un valore intero diverso da 0
@@ -306,11 +328,11 @@ def button(update, context):
     elif(query.data == "close_netA"):
         close_netA(update,context)
     elif(query.data == "list_wan_rules"):
-        fetch_rules(update,context,"wan")
+        show_rules(update,context,"wan")
     elif(query.data == "list_lan_rules"):
-        fetch_rules(update,context,"lan")
+        show_rules(update,context,"lan")
     elif(query.data == "list_opt1_rules"):
-        fetch_rules(update,context,"opt1")
+        show_rules(update,context,"opt1")
 
 
 
