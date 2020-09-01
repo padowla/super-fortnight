@@ -8,7 +8,7 @@
 > python-telegram-bot, pfsense, firewall, telegram, bot
 
 
-(https://github.com/lilpilgit/super-fortnight/blob/master/image/screen_start_bot.png)
+(https://github.com/lilpilgit/super-fortnight/blob/master/image/screen_start_bot.png)()]
 
 
 - This is a simple PoC of Telegram Bot. In this case we use two custom PHP script running on pfsense (<a href="https://github.com/lilpilgit/super-fortnight/blob/master/handleNetA.php" target="_blank">**script 1**</a> & <a href="https://github.com/lilpilgit/super-fortnight/blob/master/readRules.php" target="_blank">**script 2**</a> ) to enable/disable remotely some Firewall rules or list current firewall rules.
