@@ -12,6 +12,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram import KeyboardButton, ReplyKeyboardMarkup
 from telegram.ext.dispatcher import run_async
 from telegram import MessageEntity
+from telegram import ParseMode #for bold, italic, html entities and so on
 import time, threading
 from telegram.ext import BaseFilter
 from telegram import ChatAction
@@ -33,7 +34,39 @@ white_check_mark = emojize(":white_check_mark:", use_aliases=True)
 red_cross_block = emojize(":x:", use_aliases=True)
 raised_hand = emojize(":raised_hand:", use_aliases=True)
 warning = emojize(":warning:", use_aliases=True)
-#############
+write_to_log = emojize(":memo:", use_aliases=True)
+###
+### DICTIONARY FOR ICMP PROTOCOL SUBTYPES ###
+icmp_subtypes = {
+                    'any':'any',
+                    'althost':'Alternate Host',
+                    'dataconv':'Datagram conversion error',
+                    'echorep':'Echo reply',
+                    'echoreq':'Echo request',
+                    'inforep':'Information reply',
+                    'inforeq':'Information request',
+                    'ipv6-here':'IPv6 I-am-here',
+                    'ipv6-where':'IPv6 where-are-you',
+                    'maskrep':'Address mask reply',
+                    'maskreq':'Address mask request',
+                    'mobredir':'Mobile host redirect',
+                    'mobregrep':'Mobile registration reply',
+                    'mobregreq':'Mobile registration request',
+                    'paramprob':'Parameter problem (invalid IP header)',
+                    'photuris':'Photuris',
+                    'redir':'Redirect',
+                    'routeradv':'Router advertisement',
+                    'routersol':'Router solicitation',
+                    'skip':'SKIP',
+                    'squench':'Source quench',
+                    'timerep':'Timpestamp reply',
+                    'timereq':'Timestamp',
+                    'timex':'Time exceeded',
+                    'trace':'Traceroute',
+                    'unreach':'Destination unreacheable'
+        
+                }
+###
 
 ##                                   CUSTOM FILTERS                                                ##
 class FilterKeyboardListRules(BaseFilter):
@@ -96,12 +129,14 @@ def parse_rule(json_rule):
     rule_dest_addr = "" #text for destination address of rule
     rule_dest_port = "" #text for destination port of rule
     rule_description = "" #text for description of rule
+    rule_logged = None #emoji if i selected : "Log packets that are handled by this rule"
 
     #Identify if rule is enabled or not
     if("disabled" not in json_rule): #"disabled":""
         rule_enabled = "YES"
     else:
         rule_enabled = warning + "NO" + warning 
+
 
     #Identify id tracker of rule:
     rule_tracker = json_rule['tracker']
@@ -127,7 +162,12 @@ def parse_rule(json_rule):
 
     #Identify type of protocol ("protocol": is present only if is different from "Any"):
     if("protocol" in json_rule):
-        rule_protocol = json_rule['protocol']
+        #Verify if protocol is ICMP ex: "protocol":"icmp","icmptype":"trace"
+        if(json_rule['protocol'] == "icmp"):
+            #Get subtype
+            rule_protocol = f"ICMP || {icmp_subtypes[json_rule['icmptype']]}"
+        else:
+            rule_protocol = json_rule['protocol']
     else:
         rule_protocol = "Any"
    
@@ -157,7 +197,7 @@ def parse_rule(json_rule):
         else: #it's a single port
             rule_source_port = json_rule['source']['port']
     else:
-        rule_source_port = "*"
+        rule_source_port = "Any"
 
 
     #Identify destination address: 
@@ -187,7 +227,7 @@ def parse_rule(json_rule):
         else: #it's a single port
             rule_dest_port = json_rule['destination']['port']
     else:
-        rule_dest_port = "*"
+        rule_dest_port = "Any"
 
     #Identify description 
     if(not json_rule['descr']): #empty string in Python are false
@@ -196,30 +236,38 @@ def parse_rule(json_rule):
         rule_description = json_rule['descr']
 
 
-    return '''
-tracker: {rule_tracker}
-enabled: {rule_enabled}
-type: {rule_type}
-IP address family: {rule_ipprot}
-protocol: {rule_protocol}
-Source Address: {rule_source_addr}
-Source Port: {rule_source_port}
-Destination Address: {rule_dest_addr}
-Destination Port: {rule_dest_port}
-Description: {rule_description}
-           '''.format(rule_tracker=rule_tracker,
-                      rule_enabled=rule_enabled,
-                      rule_type=rule_type,
-                      rule_ipprot=rule_ipprot,
-                      rule_protocol=rule_protocol,
-                      rule_source_addr=rule_source_addr,
-                      rule_source_port=rule_source_port,
-                      rule_dest_addr=rule_dest_addr,
-                      rule_dest_port=rule_dest_port,
-                      rule_description=rule_description
-                      )
+    #Identify logging of packets
+    if("log" in json_rule): #ex: "log":""
+        rule_logged = write_to_log + " YES"
 
 
+    result = '''
+<b>tracker</b> : <code> {rule_tracker} </code>
+<b>enabled</b> : <code> {rule_enabled} </code>
+<b>type</b> : <code> {rule_type} </code>
+<b>IP address family</b> : <code> {rule_ipprot} </code>
+<b>protocol</b> : <code> {rule_protocol} </code>
+<b>Source Address</b> : <code> {rule_source_addr} </code>
+<b>Source Port</b> : <code> {rule_source_port} </code>
+<b>Destination Address</b> : <code> {rule_dest_addr} </code>
+<b>Destination Port</b> : <code> {rule_dest_port} </code>
+<b>Description</b> : <code> {rule_description} </code>'''.format(rule_tracker=rule_tracker,
+                                                                 rule_enabled=rule_enabled,
+                                                                 rule_type=rule_type,
+                                                                 rule_ipprot=rule_ipprot,
+                                                                 rule_protocol=rule_protocol,
+                                                                 rule_source_addr=rule_source_addr,
+                                                                 rule_source_port=rule_source_port,
+                                                                 rule_dest_addr=rule_dest_addr,
+                                                                 rule_dest_port=rule_dest_port,
+                                                                 rule_description=rule_description
+                                                                 )
+
+    if(rule_logged is not None):
+        result += '''\n<b>Log</b> : <code>{rule_logged}</code>
+                '''.format(rule_logged=rule_logged)
+
+    return result
 
 def fetch_rules(update, context, interface):
     output = None
@@ -241,7 +289,7 @@ def show_rules(update, context, interface):
     JSONrules = fetch_rules(update, context, interface)
 
     for rule in JSONrules:
-        context.bot.send_message(chat_id=update.effective_chat.id, text=parse_rule(rule), reply_markup=reply_kb_markup)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=parse_rule(rule), reply_markup=reply_kb_markup, parse_mode=ParseMode.HTML)
 
 
 def show_actions(update, context):
@@ -257,7 +305,7 @@ def open_netA(update,context):
     result = exec_command("/usr/local/bin/php /root/handleNetA.php disable && echo $?")
     print(f"result ==> {result}")
     if(result == "0"):
-        output = "netA is now open"
+        output = f"{white_check_mark} netA is now open"
     else:
         output = "An error occurred"
 
@@ -270,7 +318,7 @@ def close_netA(update,context):
     result = exec_command("/usr/local/bin/php /root/handleNetA.php enable && echo $?")
     print(f"result ==> {result}")
     if(result == "0"):
-        output = "netA is now closed"
+        output = f"{white_check_mark} netA is now closed"
     else:
         output = "An error occurred"
 
