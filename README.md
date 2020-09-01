@@ -8,7 +8,7 @@
 > python-telegram-bot, pfsense, firewall, telegram, bot
 
 
-[![INSERT YOUR GRAPHIC HERE](http://i.imgur.com/dt8AUb6.png)]()
+[![INSERT YOUR GRAPHIC HERE](https://github.com/lilpilgit/super-fortnight/blob/master/image/screen_start_bot.png)]()
 
 - Most people will glance at your `README`, *maybe* star it, and leave
 - Ergo, people should understand instantly what your project is about based on your repo
