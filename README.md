@@ -26,7 +26,7 @@
 
 **Recordit**
 
-![Recordit GIF](https://github.com/lilpilgit/super-fortnight/blob/master/image/output_prova_finale.gif)
+![Recordit GIF](https://github.com/lilpilgit/super-fortnight/blob/master/image/output_screerecord.gif)
 
 **ttystudio**
 
