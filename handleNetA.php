@@ -1,14 +1,15 @@
 #!/usr/local/bin/php-cgi -f
 <?php
-/* Il file /usr/local/etc/php.ini contiene la entry include_path
-   che specifica una lista di directory, separate da ":", dove le funzioni require(),
-   require_once(), include(), fopen() etc... cercano i file richiesti. Nel caso di un
-   installazione fresca di pfSense, i path inclusi sono:
-   include_path = ".:/etc/inc:/usr/local/www:/usr/local/captiveportal:/usr/local/pkg:
-                     /usr/local/www/classes:/usr/local/www/classes/Form:/usr/local/share/pear:
-                     /usr/local/share/openssl_x509_crl/"
-   All'interno di /etc/inc sono presenti i file php filter.inc e config.inc necessari al funzionam
-   dello script.
+/*   
+    The /usr/local/etc/php.ini file contains the include_path entry
+    which specifies a list of directories, separated by ":", where the functions require(),
+    require_once(), include(), fopen() etc ... search for required files. In the case of a
+    fresh installation of pfSense, the paths included are:
+    include_path = ".:/etc/inc:/usr/local/www:/usr/local/captiveportal:/usr/local/pkg:
+                      /usr/local/www/classes:/usr/local/www/classes/Form:/usr/local/share/pear:
+                      /usr/local/share/openssl_x509_crl/"
+    Inside / etc / inc there are the php filter.inc and config.inc files necessary for the function
+    of the script.
 */
 
 #require_once("globals.inc");
