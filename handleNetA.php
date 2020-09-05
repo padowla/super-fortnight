@@ -83,12 +83,8 @@ isolateLAN57($arg1);
 
 write_config();
 
-$retval |= filter_configure(); // https://github.com/pfsense/pfsense/blob/master/src/etc/inc/filter.inc
-
+$retval |= filter_configure(); #filter_configure() ==> reload filter async  // https://github.com/pfsense/pfsense/blob/master/src/etc/inc/filter.inc
 
 exit($retval);
-//      ^
-// or assignment
-
 ?>
 
