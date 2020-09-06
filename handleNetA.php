@@ -18,6 +18,8 @@ require_once("filter.inc");
 require_once("config.inc");
 
 global $config;
+global $result;
+$result = array("success" => false); #by default there is an error...pessimistic approach
 
 if (count($argv) == 1){
 	echo "Pass an argument please!\n";
@@ -54,6 +56,7 @@ function isolateLAN57($isolate = 'enable') {
 	global $track_id_LAN57;
 	global $track_id_LAN58;
 	global $config;
+	global $result;
 
 	foreach ($config[filter][rule] as &$value) {
 		
@@ -85,24 +88,23 @@ function isolateLAN57($isolate = 'enable') {
 
 		}
 	}
+	
+	# modify result's array
+	$result["success"] = true;
+
 }	
 	
-//    if (strpos(strtolower($value[descr]), 'pfb_') !== false) {
-//        if (strpos(strtolower($arg1), 'disable') !== false) {
-//            $value[disabled] = true;
-//        }
-//        if (strpos(strtolower($arg1), 'enable') !== false) {
-//            unset($value[disabled]);
-//        }
-//    }
-
-
 isolateLAN57($arg1);
 
 write_config();
 
-$retval |= filter_configure(); #filter_configure() ==> reload filter async  // https://github.com/pfsense/pfsense/blob/master/src/etc/inc/filter.inc
+echo json_encode($result);
+
+$retval |= filter_configure(); // https://github.com/pfsense/pfsense/blob/master/src/etc/inc/filter.inc
+
 
 exit($retval);
+
 ?>
+
 
