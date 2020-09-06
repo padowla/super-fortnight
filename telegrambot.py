@@ -100,7 +100,9 @@ def exec_command(command_pfSense):
 
     stdin, stdout, stderr = client.exec_command(command_pfSense)
     
-    
+    # rstrip(): This method returns a copy of the string
+    #           in which all chars have been stripped from
+    #           the end of the string (default whitespace characters).   
     firstline = stdout.readlines()[0].rstrip()
     
     client.close()
@@ -271,17 +273,13 @@ def parse_rule(json_rule):
 def fetch_rules(update, context, interface):
     output = None
     JSONrules = None
-    JSONstring = exec_command(f"/usr/local/bin/php /root/readRules.php {interface}")
-    result = exec_command("echo $?")
+    result_string = exec_command(f"/usr/local/bin/php /root/readRules.php {interface}")
+    JSONresult = json.loads(result_string)
     
-    if(result == "0"):
-        #output = "JSON created"
-        JSONrules = json.loads(JSONstring)
+    if(JSONresult["result"]["success"] == True):
+        JSONrules = JSONresult["rules"]
         print(JSONrules)
-    else:
-        pass
-        #output = "An error occurred"
-    print(result)
+    
     return JSONrules
     
 def show_rules(update, context, interface):
@@ -301,9 +299,10 @@ def show_actions(update, context):
 def open_netA(update,context):
 
     output = None
-    result = exec_command("/usr/local/bin/php /root/handleNetA.php disable && echo $?")
-    print(f"result ==> {result}")
-    if(result == "0"):
+    result_string = exec_command("/usr/local/bin/php /root/handleNetA.php disable")
+    JSONresult = json.loads(result_string)
+
+    if(JSONresult["success"] == True):
         output = f"{white_check_mark} netA is now open"
     else:
         output = "An error occurred"
@@ -314,9 +313,10 @@ def open_netA(update,context):
 
 def close_netA(update,context):
     output = None
-    result = exec_command("/usr/local/bin/php /root/handleNetA.php enable && echo $?")
-    print(f"result ==> {result}")
-    if(result == "0"):
+    result_string = exec_command("/usr/local/bin/php /root/handleNetA.php enable")
+    JSONresult = json.loads(result_string)
+    
+    if(JSONresult["success"] == True):
         output = f"{white_check_mark} netA is now closed"
     else:
         output = "An error occurred"
@@ -328,15 +328,15 @@ def close_netA(update,context):
 def unknown_command(update,context):
     #Alcuni utenti confusi potrebbero provare ad inviare comandi al bot che non puo' comprendere in quanto non aggiunti al dispatcher
     #Dunque e' possibile usare un MessageHandler con il filtro "command" per rispondere a tutti i comandi che non sono riconosciuti dai precedenti handler
-    #Tale Handler deve essere aggiunto come ultimo altrimenti verrebbe attivato prima che CommandHandler abbia la possibilita'  di
+    #Tale Handler deve essere aggiunto come ultimo altrimenti verrebbe attivato prima che CommandHandler abbia la possibilita'� di
     #poter esaminare l'aggiornamento. Una volta gestito infatti un aggiornamento tutti gli altri gestori vengono ignorati
-    #Per aggirare questo fenomeno Ã¨ possibile  passare l'argomento "group" nel metodo add_handler con un valore intero diverso da 0
-    context.bot.send_message(chat_id=update.effective_chat.id,text="Scusami ma non capisco ciÃ² che mi chiedi...")
+    #Per aggirare questo fenomeno è possibile  passare l'argomento "group" nel metodo add_handler con un valore intero diverso da 0
+    context.bot.send_message(chat_id=update.effective_chat.id,text="Scusami ma non capisco ciò che mi chiedi...")
 
 
 def unknown_text(update,context):
     #This callback handle unknown text/command
-    context.bot.send_message(chat_id=update.effective_chat.id,text="â â â  Text or command not valid  â â â ")
+    context.bot.send_message(chat_id=update.effective_chat.id,text="⚠⚠⚠ Text or command not valid  ⚠⚠⚠")
 
 def clear_env():
     WAIT_SECONDS = 86400 #il numero di secondi in un giorno
