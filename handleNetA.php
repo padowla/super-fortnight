@@ -15,7 +15,7 @@
 #require_once("globals.inc");
 require_once("filter.inc");
 #require_once("util.inc");
-require_once("config.inc");
+require_once("config.inc"); /* config.inc ==> config.lib.inc */
 
 global $config;
 global $result;
@@ -27,7 +27,6 @@ if (count($argv) == 1){
 	echo "disable: disable rules\n";
 	exit;
 }
-
 
 $arg1 = $argv[1];
 
@@ -45,11 +44,10 @@ $arg1 = $argv[1];
  *   $config      - array containing all configuration variables
 
  ******/ 
-
 $config = parse_config(true);
-
 $track_id_LAN57 = '1596729173';  
 $track_id_LAN58 = '1596738586';
+
 
 function isolateLAN57($isolate = 'enable') {
 	
@@ -91,12 +89,12 @@ function isolateLAN57($isolate = 'enable') {
 	
 	# modify result's array
 	$result["success"] = true;
-
 }	
 	
 isolateLAN57($arg1);
 
 write_config();
+
 
 echo json_encode($result);
 
@@ -106,5 +104,3 @@ $retval |= filter_configure(); // https://github.com/pfsense/pfsense/blob/master
 exit($retval);
 
 ?>
-
-
