@@ -29,6 +29,21 @@ if (count($argv) == 1){
 
 $arg1 = $argv[1];
 
+/***** 
+
+ Parse /cf/conf/config.xml
+ 
+ From source code https://github.com/pfsense/pfsense/blob/master/src/etc/inc/config.lib.inc:
+ config/parse_config
+ * NAME
+ *   parse_config - Read in config.cache or config.xml if needed and return $config array
+ * INPUTS
+ *   $parse       - boolean to force parse_config() to read config.xml and generate config.cache
+ * RESULT
+ *   $config      - array containing all configuration variables
+
+ ******/ 
+
 $config = parse_config(true);
 
 $track_id_LAN57 = '1596729173';  
