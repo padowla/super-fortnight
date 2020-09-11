@@ -23,7 +23,7 @@ $result = array("success" => false); #by default there is an error...pessimistic
 
 if (count($argv) == 1){
 	echo "Pass the interface (ex: wan) please!\n";
-	exit;
+	exit(1);
 }
 
 $interface = $argv[1];
