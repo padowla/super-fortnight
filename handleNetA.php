@@ -25,7 +25,7 @@ if (count($argv) == 1){
 	echo "Pass an argument please!\n";
 	echo "enable: enable rules\n";
 	echo "disable: disable rules\n";
-	exit;
+	exit(1);
 }
 
 $arg1 = $argv[1];
