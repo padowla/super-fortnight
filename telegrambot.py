@@ -34,6 +34,11 @@ red_cross_block = emojize(":x:", use_aliases=True)
 raised_hand = emojize(":raised_hand:", use_aliases=True)
 warning = emojize(":warning:", use_aliases=True)
 write_to_log = emojize(":memo:", use_aliases=True)
+
+#GLOBAL PATH
+PATH_API='/home/centuser/ZabbixServerThesisBot/api_telegram'
+PATH_LOG='/home/centuser/ZabbixServerThesisBot/mylog'
+
 ###
 ### DICTIONARY FOR ICMP PROTOCOL SUBTYPES ###
 icmp_subtypes = {
@@ -328,15 +333,15 @@ def close_netA(update,context):
 def unknown_command(update,context):
     #Alcuni utenti confusi potrebbero provare ad inviare comandi al bot che non puo' comprendere in quanto non aggiunti al dispatcher
     #Dunque e' possibile usare un MessageHandler con il filtro "command" per rispondere a tutti i comandi che non sono riconosciuti dai precedenti handler
-    #Tale Handler deve essere aggiunto come ultimo altrimenti verrebbe attivato prima che CommandHandler abbia la possibilita'� di
+    #Tale Handler deve essere aggiunto come ultimo altrimenti verrebbe attivato prima che CommandHandler abbia la possibilita'  di
     #poter esaminare l'aggiornamento. Una volta gestito infatti un aggiornamento tutti gli altri gestori vengono ignorati
-    #Per aggirare questo fenomeno è possibile  passare l'argomento "group" nel metodo add_handler con un valore intero diverso da 0
-    context.bot.send_message(chat_id=update.effective_chat.id,text="Scusami ma non capisco ciò che mi chiedi...")
+    #Per aggirare questo fenomeno Ã¨ possibile  passare l'argomento "group" nel metodo add_handler con un valore intero diverso da 0
+    context.bot.send_message(chat_id=update.effective_chat.id,text="Scusami ma non capisco ciÃ² che mi chiedi...")
 
 
 def unknown_text(update,context):
     #This callback handle unknown text/command
-    context.bot.send_message(chat_id=update.effective_chat.id,text="⚠⚠⚠ Text or command not valid  ⚠⚠⚠")
+    context.bot.send_message(chat_id=update.effective_chat.id,text="â â â  Text or command not valid  â â â ")
 
 def clear_env():
     WAIT_SECONDS = 86400 #il numero di secondi in un giorno
@@ -345,9 +350,6 @@ def clear_env():
     logging.info("ENVIRONMENT CLEARED")
     threading.Timer(WAIT_SECONDS,clear_env).start() #after WAIT_SECONDS start thread that clean log file 
 
-#GLOBAL PATH
-PATH_API='/home/centuser/ZabbixServerThesisBot/api_telegram'
-PATH_LOG='/home/centuser/ZabbixServerThesisBot/mylog'
 
 #_________________________________________________________________________________________________________
 def start(update, context):
